@@ -205,6 +205,49 @@
             grid-row: 1/2;
             height: 100%;
         }
+
+        .footer{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: flex-end;
+            background-color: var(--yellow);
+            border-top-right-radius: 80px;
+            transform: translateY(100%);
+
+            animation: footer 0.5s ease-in-out 2.5s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes footer {
+           0%{
+            transform: translateY(100%);
+           } 
+           100%{
+            transform: translateY(0px);
+           }
+        }
+
+        .footer div{
+            width: 150px;
+            height: 50%;
+            background-color: var(--blue);
+            border-radius: 20px 20px 0 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer div img{
+            position: absolute;
+            width: 160px;
+            bottom: 30px;
+            cursor: pointer;
+            transform: translateY(0px) scale(1);
+            transition: transform 0.5s ease-in-out;
+        }
+        .footer div:hover img{
+            transform: translateY(-20px) scale(1.1);
+            transition: transform 0.3s ease-in-out;
+        }
         .loader div {
             background: white;
             width: 40px;
@@ -271,15 +314,15 @@
                 <img src="https://i.ibb.co/x16pz1x/super-man.png" alt="hero">
                 
             </section>
-            <section>
+            <section class="footer">
                 <div>
-                    <img src="" alt="">
+                    <img src="https://i.ibb.co/tKWqw8J/spiderman.png" alt="spiderman">
                 </div>
                 <div>
-                    <img src="" alt="">
+                    <img src="https://i.ibb.co/Xzsdvgg/robin.png" alt="robin">
                 </div>
                 <div>
-                    <img src="" alt="">
+                    <img src="https://i.ibb.co/M18p91c/batman.webp" alt="batman">
                 </div>
             </section>
         </section>
