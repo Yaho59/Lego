@@ -299,14 +299,15 @@
         }
         .modal__content{
             background-color: white;
-            width: 50%;
-            height: 50%;
-            display: grid;
+            width: 550px;
+            height: 362px;
+            display: flex;
+            flex-direction: column;
             place-items: center;
+            gap: 10px;
         }
         .modal__content--close{
             align-self:flex-start;
-            justify-self: end;
             padding: 10px;
         }
         .modal__content--slider{
@@ -321,17 +322,21 @@
             height: 100%;
         }
         .card{
-            background-color: #ffd602;
             position: absolute;
             left: 0;
             right: 0;
-            width: 50%;
+            width: 70%;
             height: 100%;
             margin: 0 auto;
             transition: transform 0.5s ease;
             cursor: pointer;
             display: grid;
             place-items: center;
+        }
+
+        .card img{
+            width: 100%;
+            height: 100%;
         }
         #radio-1:checked ~ .cards #card-1,
         #radio-2:checked ~ .cards #card-2,
@@ -392,13 +397,13 @@
                 
             </section>
             <section class="footer">
-                <div id="button">
+                <div id="button" class="button1">
                     <img src="https://i.ibb.co/tKWqw8J/spiderman.png" alt="spiderman">
                 </div>
-                <div id="button">
+                <div id="button" class="button2">
                     <img src="https://i.ibb.co/Xzsdvgg/robin.png" alt="robin">
                 </div>
-                <div id="button">
+                <div id="button" class="button3">
                     <img src="https://i.ibb.co/M18p91c/batman.webp" alt="batman">
                 </div>
             </section>
@@ -412,7 +417,7 @@
         <!-- Modal -->
         <section class="modal hidden">
             <div class="modal__content">
-                <img class="modal__content--close" src="./close.svg" alt="">
+                <img class="modal__content--close" src="./image/close.svg" alt="">
 
                 <div class="modal__content--slider">
                     <input type="radio" name="radio" class="slider-1 slider" id="radio-1" checked>
@@ -421,13 +426,10 @@
 
                     <div class="cards">
                         <label for="radio-1" id="card-1" class="card">
-                            <img src="" alt="">
                         </label>
-                        <label for="radio-2" id="card-2" class="card">
-                            <img src="" alt="">
+                        <label for="radio-2" id="card-2" class="card">   
                         </label>
                         <label for="radio-3" id="card-3" class="card">
-                            <img src="" alt="">
                         </label>
                     </div>
                 </div>
